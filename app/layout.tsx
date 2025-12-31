@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   description: 'TwistRise LLC provides strategic business consulting and operational analysis.',
 };
 
+export const viewport = {
+  themeColor: '#ffffff',
+  colorScheme: 'light',
+};
+
 export default function RootLayout({
   children,
 }: {
