@@ -28,13 +28,13 @@ jobs:
       - name: Debug Build Output
         run: ls -R out/
 
-      - name: 5. Deploy to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./out/
-          server-dir: ./public_html/
-          # Be careful: This mirrors the 'out' folder to 'public_html'. 
-          # It overwrites changes on the server.
+      - name: 5. Force Deploy with lftp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
+          # Connect and upload files from ./out/ to ./public_html/
+          # -R: Reverse mirror (upload)
+          # -v: Verbose
+          # --overwrite: Overwrite existing files
+          # No --delete flag means we ignore missing remote files (Avoids 550 error)
+          lftp -c "set ftp:ssl-allow no; open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}; mirror -R -v --overwrite ./out/ ./public_html/"
