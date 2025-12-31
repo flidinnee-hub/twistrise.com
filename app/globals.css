@@ -276,6 +276,21 @@ nav {
   margin-bottom: 1.5rem;
 }
 
+.card ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.card li {
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+}
+
+.card strong {
+  color: var(--primary-dark);
+}
+
 .card-action {
   margin-top: auto;
   color: var(--accent);
