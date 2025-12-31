@@ -28,3 +28,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - `components/`: Reusable UI components (Header, Footer).
 - `public/`: Static assets (images, icons).
 - `.github/workflows/`: Automation scripts for deployment.
+
+<!-- Deployment Trigger: Final Fresh Upload -->
