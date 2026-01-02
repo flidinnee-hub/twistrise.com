@@ -17,7 +17,7 @@ export default function Refund() {
                     color: '#0f172a !important'
                 }}>
                     <h1 style={{ marginBottom: '1rem', color: '#0f172a !important', fontSize: '2.5rem' }}>Refund Policy</h1>
-                    <p style={{ marginBottom: '2rem', color: '#64748b !important', fontSize: '0.9rem' }}>Last Updated: December 2024</p>
+                    <p style={{ marginBottom: '2rem', color: '#64748b !important', fontSize: '0.9rem' }}>Last Updated: December 2025</p>
 
                     <section style={{ marginBottom: '2rem' }}>
                         <h3 style={{ marginBottom: '1rem', color: '#0f172a !important', fontSize: '1.25rem' }}>1. General Policy</h3>
