@@ -64,7 +64,7 @@ export default function Home() {
             <p style={{ marginBottom: '2rem', color: '#E2E8F0' }}>
               We adhere to strict professional standards, prioritizing clarity, integrity, and measurable structural improvements over short-term trends.
             </p>
-            <Link href="/about" style={{ color: 'var(--accent)', fontWeight: 700, background: 'white', padding: '0.5rem 1rem', borderRadius: '99px' }}>
+            <Link href="/about" style={{ display: 'inline-block', color: 'var(--accent)', fontWeight: 700, background: 'white', padding: '0.75rem 1.5rem', borderRadius: '99px', textDecoration: 'none', maxWidth: '100%', wordWrap: 'break-word' }}>
               Learn more about our approach &rarr;
             </Link>
           </div>
