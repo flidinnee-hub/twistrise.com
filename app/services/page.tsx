@@ -21,7 +21,7 @@ export default function Services() {
             <section className="section">
                 <div className="container">
                     <div className="grid">
-                        <div className="card">
+                        <div className="card" id="advisory">
                             <img src="/images/service_strategy.png" alt="Business Advisory" className="card-img" />
                             <div>
                                 <h3>Business Advisory</h3>
@@ -35,14 +35,14 @@ export default function Services() {
                                 <p>Strategic planning for digital infrastructure. We advise on software selection, integration strategies, and data management policies. <em>Note: We do not provide marketing execution or social media management services.</em></p>
                             </div>
                         </div>
-                        <div className="card">
+                        <div className="card" id="process">
                             <img src="/images/service_process.png" alt="Process Optimization" className="card-img" />
                             <div>
                                 <h3>Process Optimization</h3>
                                 <p>Detailed mapping of internal business processes to reduce redundancy and improve throughput. We deliver documented standard operating procedures and workflow recommendations.</p>
                             </div>
                         </div>
-                        <div className="card">
+                        <div className="card" id="research">
                             <img src="/images/service_research.png" alt="Market Research" className="card-img" />
                             <div>
                                 <h3>Market Research</h3>

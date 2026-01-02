@@ -34,7 +34,7 @@ export default function Home() {
                 <h3>Business Strategy</h3>
                 <p>Comprehensive evaluation of business models and long-term planning to align operational capabilities with market opportunities.</p>
               </div>
-              <span className="card-action">Learn More &rarr;</span>
+              <Link href="/services#advisory" className="card-action">Learn More &rarr;</Link>
             </div>
             <div className="card">
               <img src="/images/service_process.png" alt="Process Optimization" className="card-img" />
@@ -42,7 +42,7 @@ export default function Home() {
                 <h3>Process Optimization</h3>
                 <p>Analysis of internal workflows to identify bottlenecks and implement standardized procedures for improved resource allocation.</p>
               </div>
-              <span className="card-action">Learn More &rarr;</span>
+              <Link href="/services#process" className="card-action">Learn More &rarr;</Link>
             </div>
             <div className="card">
               <img src="/images/service_research.png" alt="Market Research" className="card-img" />
@@ -50,7 +50,7 @@ export default function Home() {
                 <h3>Market Research</h3>
                 <p>Data-driven assessments of industry trends and competitive landscapes to support evidence-based strategic planning.</p>
               </div>
-              <span className="card-action">Learn More &rarr;</span>
+              <Link href="/services#research" className="card-action">Learn More &rarr;</Link>
             </div>
           </div>
         </div>
