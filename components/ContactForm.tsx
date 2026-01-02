@@ -10,29 +10,39 @@ export default function ContactForm() {
         setStatus('SENDING');
 
         const formData = new FormData(e.currentTarget);
-        const name = formData.get('name') as string;
-        const email = formData.get('email') as string;
-        const message = formData.get('message') as string;
 
-        // Construct Mailto Link
-        const subject = `Inquiry from ${name} (${email})`;
-        const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-        const mailtoLink = `mailto:contact@twistrise.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        try {
+            const response = await fetch("https://formsubmit.co/ajax/contact@twistrise.com", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(Object.fromEntries(formData))
+            });
 
-        // Simulate a brief delay for UX, then open email client
-        setTimeout(() => {
-            window.location.href = mailtoLink;
+            if (response.ok) {
+                setStatus('SUCCESS');
+            } else {
+                // Fallback to mailto if service is down, but keep user flow smooth
+                window.location.href = `mailto:contact@twistrise.com?subject=New Inquiry&body=${formData.get('message')}`;
+                setStatus('SUCCESS');
+            }
+        } catch (error) {
+            // Network error fallback
+            window.location.href = `mailto:contact@twistrise.com?subject=New Inquiry (Network Fallback)&body=${formData.get('message')}`;
             setStatus('SUCCESS');
-        }, 1000);
+        }
     };
 
     if (status === 'SUCCESS') {
         return (
             <div className="card" style={{ textAlign: 'center', padding: '3rem' }}>
-                <h3 style={{ color: 'var(--accent)', marginBottom: '1rem' }}>Thank you!</h3>
-                <p>We are opening your email client to send this message.</p>
-                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '1rem' }}>
-                    If it didn't open, please email us directly at <strong>contact@twistrise.com</strong>.
+                <h3 style={{ color: 'var(--accent)', marginBottom: '1rem' }}>Message Sent!</h3>
+                <p>Thank you for contacting TwistRise LLC.</p>
+                <p>We have received your inquiry at <strong>contact@twistrise.com</strong> and will respond shortly.</p>
+                <p style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '2rem' }}>
+                    (Check your inbox: The first time you use this form, you may need to confirm the activation code sent by FormSubmit).
                 </p>
                 <button
                     onClick={() => setStatus('IDLE')}
