@@ -5,8 +5,9 @@ export default function Header() {
     <header>
       <div className="container">
         <nav>
-          <Link href="/" className="logo">
-            TwistRise LLC
+          <Link href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <img src="/images/logo.png" alt="TwistRise Logo" style={{ height: '32px', width: 'auto' }} />
+            <span>TwistRise LLC</span>
           </Link>
           <ul className="nav-links">
             <li><Link href="/">Home</Link></li>
