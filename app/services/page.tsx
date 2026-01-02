@@ -59,7 +59,7 @@ export default function Services() {
                         </Link>
                         <Link href="/services/consulting" style={{ textDecoration: 'none', color: 'inherit' }}>
                             <div className="card" style={{ height: '100%' }}>
-                                <img src="/images/service_consulting_updated.png" alt="One-to-One Consulting" className="card-img" />
+                                <img src="/images/service_consulting_gen.png" alt="One-to-One Consulting" className="card-img" />
                                 <div>
                                     <h3>One-to-One Consulting</h3>
                                     <p>Dedicated consulting sessions for executive leadership. These sessions provide a confidential environment to discuss strategic challenges and receive neutral, third-party perspective.</p>
