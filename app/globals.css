@@ -228,10 +228,12 @@ nav {
 .hero h1 {
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
-  background: -webkit-linear-gradient(25deg, #0F172A, #2563EB);
+  background: -webkit-linear-gradient(25deg, #FFFFFF, #2563EB);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(37, 99, 235, 0.3);
+  /* Added subtle glow for extra pop */
 }
 
 .hero p {
