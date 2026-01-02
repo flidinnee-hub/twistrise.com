@@ -21,7 +21,7 @@ export default function Consulting() {
             <section className="section">
                 <div className="container">
                     <div className="card" style={{ maxWidth: '800px', margin: '0 auto', cursor: 'default' }}>
-                        <img src="/images/office_ambience.png" alt="One-to-One Consulting" className="card-img" style={{ maxHeight: '400px' }} />
+                        <img src="/images/service_consulting_updated.png" alt="One-to-One Consulting" className="card-img" style={{ maxHeight: '400px' }} />
                         <h2 style={{ marginBottom: '1.5rem', marginTop: '1.5rem', fontSize: '2rem' }}>Executive Leadership Support</h2>
                         <p>
                             Leadership can be isolating. Our One-to-One Consulting service offers dedicated sessions specifically for executive leadership. These sessions provide a confidential environment to discuss strategic challenges, validate ideas, and receive neutral, third-party perspectives.
