@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
     title: 'Contact Us | TwistRise LLC',
@@ -40,26 +41,7 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <div className="card">
-                            <form action="#" method="POST">
-                                <div style={{ marginBottom: '1.5rem' }}>
-                                    <label htmlFor="name" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 600 }}>Full Name</label>
-                                    <input type="text" id="name" name="name" required />
-                                </div>
-
-                                <div style={{ marginBottom: '1.5rem' }}>
-                                    <label htmlFor="email" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 600 }}>Email Address</label>
-                                    <input type="email" id="email" name="email" required />
-                                </div>
-
-                                <div style={{ marginBottom: '1.5rem' }}>
-                                    <label htmlFor="message" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 600 }}>Message</label>
-                                    <textarea id="message" name="message" rows={5} required></textarea>
-                                </div>
-
-                                <button type="submit" className="cta-button" style={{ border: 'none', cursor: 'pointer', fontSize: '1rem', width: '100%' }}>Send Message</button>
-                            </form>
-                        </div>
+                        <ContactForm />
 
                     </div>
                 </div>
