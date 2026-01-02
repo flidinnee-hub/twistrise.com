@@ -8,7 +8,7 @@ export default function Footer() {
                     <div className="footer-column">
                         <h4>TwistRise LLC</h4>
                         <p style={{ color: '#94A3B8', fontSize: '0.95rem' }}>Professional Business Consulting</p>
-                        <p style={{ color: '#94A3B8', fontSize: '0.95rem', marginTop: '0.5rem' }}>United States</p>
+                        <p style={{ color: '#94A3B8', fontSize: '0.95rem', marginTop: '0.5rem' }}>Wyoming, United States</p>
                     </div>
                     <div className="footer-column">
                         <h4>Legals</h4>
