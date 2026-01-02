@@ -47,7 +47,7 @@ export default function ContactForm() {
                 <button
                     onClick={() => setStatus('IDLE')}
                     className="cta-button"
-                    style={{ marginTop: '2rem', background: 'transparent', border: '1px solid var(--accent)', color: 'var(--accent)' }}
+                    style={{ marginTop: '2rem', border: 'none', cursor: 'pointer', width: '100%' }}
                 >
                     Send Another
                 </button>
